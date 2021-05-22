@@ -1,0 +1,32 @@
+.prj-det-container{
+    display: flex; 
+    flex-flow: column wrap;
+    margin: 20px;
+    align-items: center;
+}
+
+.details-con{
+    display: flex; 
+    flex-flow: row wrap;
+    margin-top: 20px;
+    width: 90%;
+    justify-content: center;
+}
+
+
+
+@media screen and (max-width: 640px) {
+    .details-con>div{
+        width: 100% !important;
+        margin: 20px auto !important;
+    }
+
+    .details-con {
+        height: auto !important;
+    }
+
+    .members-con{
+        width: 100% !important;
+        margin: 20px auto !important;
+    }
+}

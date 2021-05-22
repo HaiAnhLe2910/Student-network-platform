@@ -1,0 +1,102 @@
+.button-primary{
+    background-color: #E9C46A;
+    color:black;
+    margin-top: "1vh" ;
+    font-size:0.875;
+    font-weight: bold;
+    width: auto;
+    border: none;
+    height:"2vh"
+}
+
+.button-primary:disabled{
+    background-color: #E9C46A;;
+}
+
+.button-primary:disabled:hover{
+    color: white;
+    background-color: #E9C46A;
+}
+
+.button-primary:hover{
+    background-color: #FAD272;
+    color:black;
+    border:none;
+}
+
+.button-secondary{
+    background-color: #14213D;
+    color:white;
+    border:none;
+    font-size:0.875;
+    font-weight: bold;
+    width: auto;
+}
+
+.button-secondary:hover{
+    background-color: #182b4e;
+    color:white;
+    border:none;
+    font-size:0.875;
+    font-weight: bold;
+    width: auto;
+}
+
+.button-secondary:disabled{
+    background-color: #182b4e;
+    color:white;
+    border:none;
+    font-size:0.875;
+    font-weight: bold;
+    width: auto;
+}
+
+.button-danger{
+    background-color: #D9534F;
+    color:white;
+    border:none;
+}
+
+.button-danger:hover{
+    background-color:#BC4A47;
+    color:white;
+    border:none;
+}
+
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+    outline-offset: none !important;
+}
+
+.btn:focus .button-primary,.btn:active .button-primary{
+    background-color: #E9C46A;
+}
+
+.btn:focus .button-secondary,.btn:active .button-secondary{
+    background-color: #14213D;
+}
+
+.btn:focus .button-danger,.btn:active .button-danger{
+    background-color: #D9534F;
+}
+
+
+
+body .tagify {
+    margin-bottom: 3em;
+    --tag-bg: #14213D;
+    --tag-text-color: white;
+    --tag-text-color--edit: var(--tag-bg);
+    --tag-hover:  #14213D;
+
+    display: inline-block;
+    min-width: 0;
+    border: none;
+  }
+ /* Do not show the "remove tag" (x) button when only a single tag remains */
+body .tagify__tag:only-of-type .tagify__tag__removeBtn{
+    display: none;
+  }
+
+

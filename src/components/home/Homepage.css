@@ -1,0 +1,22 @@
+.Row {
+    display: table;
+    width: 100%; /*Optional*/
+    table-layout: fixed; /*Optional*/
+    border-spacing: 10px; /*Optional*/
+}
+.Col {
+    display: table-cell;
+    background-color: red; /*Optional*/
+}
+
+@media screen and (max-width: 500px) {
+    .form-group.form-inline .button-primary{
+        width: 24%;
+    }
+
+}
+@media screen and (max-width: 778px){
+    .card {
+        margin: 15px 0 !important;
+    }
+}

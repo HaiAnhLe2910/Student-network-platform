@@ -1,0 +1,205 @@
+import React, { useState } from 'react';
+
+import Form from 'react-bootstrap/Form';
+import FormControl from 'react-bootstrap/FormControl';
+import Button from 'react-bootstrap/Button';
+import Image from 'react-bootstrap/Image';
+import Alert from 'react-bootstrap/Alert';
+
+import useWindowSize from "@wbe/use-window-size";
+
+<<<<<<< HEAD
+import axios from '../config.js';
+
+import {Link} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+=======
+
+import {Link} from 'react-router-dom';
+>>>>>>> Anh-branch
+
+const Login = () => {
+    
+    const [loginFailed, setLoginFailed] = useState(false);
+    const [email, setEmail] = useState('-');
+    const [password, setPassword] = useState('-');
+
+    const { width, height } = useWindowSize();
+
+<<<<<<< HEAD
+    const signUpLink = localStorage.getItem("signUpDomain") + "/signup";
+
+    const history = useHistory();
+
+    const loginFunction = () => {
+        //console.log("API call with user name " + email + " and password " + password);
+
+        loginAPIFunction();
+
+=======
+    const loginFunction = () => {
+        console.log("API call with user name " + email + " and password " + password);
+
+        loginAPIFunction();
+
+        setLoginFailed(true);
+>>>>>>> Anh-branch
+    }
+
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+<<<<<<< HEAD
+        //console.log(e.target.value);
+=======
+        console.log(e.target.value);
+>>>>>>> Anh-branch
+    }
+
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value);
+<<<<<<< HEAD
+        //console.log(e.target.value);
+    }
+
+    const loginAPIFunction = async () =>{
+        const data = { email: email, password: password };
+        
+        axios.post('student/login',data)
+            .then(res => {
+                console.log(res.data.token);
+                localStorage.setItem('token',res.data.token);
+                history.push(`/home`);
+            })
+            .catch(error => {
+                //console.log(error.response);
+                setLoginFailed(true);
+            })
+=======
+        console.log(e.target.value);
+    }
+
+    const loginAPIFunction = async () =>{
+        
+        //GET API CALL
+        const apiURL = "https://api.randomuser.me/"; //Change API
+        const response = await fetch(apiURL);
+        const data = await response.json();
+        console.log(data);
+
+       
+        //POST API CALL
+        /*const response = await fetch('http://example.com/movies.json', {
+              method: 'POST',
+              //body: myBody,  string or object
+              body: JSON.stringify({
+                userId: 1,
+                title: "clean room",
+                completed: false
+                }),
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            });
+            const data = await response.json(); //extract JSON from the http response
+            // do something with myJson
+        }*/
+>>>>>>> Anh-branch
+    }
+    
+    if (width > 1000) {
+
+        return (
+                <div style={{ paddingTop: '5%',paddingBottom: '5%',paddingLeft: '36%',paddingRight: '36%'}}>
+
+                    
+
+                    <div style={{borderStyle: 'solid', borderWidth: '1px', borderRadius: '5px', paddingTop: '10%',paddingLeft: '10%',paddingRight: '10%',paddingBottom: '10%'}}> 
+                        <div style={{borderBottom: 'solid', borderWidth: '1px',paddingLeft: '20%',paddingRight: '20%',paddingBottom: '10%'}}>
+                            <div>
+                                <h1 style={{textAlign: 'center'}}>ITEAM</h1>
+                            </div>
+                            <div style={{ textAlign: 'center'}}> <b>Welcome back!</b></div>
+                        </div>
+
+                        <div style={{borderBottom: 'solid', borderWidth: '1px', paddingTop: '10%', paddingBottom: '10%'}}>
+                            {loginFailed && 
+                            <Alert  variant='danger'>
+                                Email/ Password not found
+                            </Alert>}
+                            <Form>
+                                <Form.Group controlId="formBasicEmail">
+                                <Form.Control type="email" placeholder="Email"  onChange={handleEmailChange}/>
+                                </Form.Group>
+                            
+                                <Form.Group controlId="formBasicPassword">
+                                <Form.Control type="password" placeholder="Password"  onChange={handlePasswordChange}/>
+                                </Form.Group>
+        
+                            </Form>
+                            <Button variant="primary" type="submit" style={{width: '100%', color: 'black', backgroundColor:'#E9C46A', borderColor: '#E9C46A'}} onClick={loginFunction}>
+                                Log in
+                            </Button>
+                            <div style={{ paddingTop: '10%',  textAlign: 'right'}}>
+                                <Link to="/resetpassword">Forgot Password?</Link>
+                            </div>
+                        </div>
+                            
+                        <div style={{ paddingTop: '10%',  textAlign: 'center'}}>
+<<<<<<< HEAD
+                            Don't have an account? <a href={signUpLink}>Sign Up</a>
+=======
+                            Don't have an account? <a href="">Sign Up</a>
+>>>>>>> Anh-branch
+                        </div>
+                    </div>
+                </div>
+        );
+    }
+    return (
+            <div>
+            
+                    <div style={{paddingTop: '10%',paddingLeft: '10%',paddingRight: '10%',paddingBottom: '10%'}}> 
+                        <div style={{borderBottom: 'solid', borderWidth: '1px',paddingLeft: '20%',paddingRight: '20%',paddingBottom: '10%'}}>
+                            <div>
+                                <h1 style={{textAlign: 'center'}}>ITEAM</h1>
+                            </div>
+                            <div style={{ textAlign: 'center'}}> <b>Welcome back!</b></div>
+                        </div>
+
+                        <div style={{borderBottom: 'solid', borderWidth: '1px', paddingTop: '10%', paddingBottom: '10%'}}>
+                            {loginFailed && 
+                            <Alert  variant='danger'>
+                                Email/ Password not found
+                            </Alert>}
+                            <Form>
+                                <Form.Group controlId="formBasicEmail">
+                                <Form.Control type="email" placeholder="Email"  onChange={handleEmailChange}/>
+                                </Form.Group>
+                            
+                                <Form.Group controlId="formBasicPassword">
+                                <Form.Control type="password" placeholder="Password"  onChange={handlePasswordChange}/>
+                                </Form.Group>
+        
+                            </Form>
+                            <Button variant="primary" type="submit" style={{width: '100%', color: 'black', backgroundColor:'#E9C46A', borderColor: '#E9C46A'}} onClick={loginFunction}>
+                                Log in
+                            </Button>
+                            <div style={{ paddingTop: '10%',  textAlign: 'right'}}>
+                                <Link to="/resetpassword">Forgot Password?</Link>
+                            </div>
+                        </div>
+                            
+                        <div style={{ paddingTop: '10%',  textAlign: 'center'}}>
+<<<<<<< HEAD
+                            Don't have an account? <a href={signUpLink}>Sign Up</a>
+=======
+                            Don't have an account? <a href="">Sign Up</a>
+>>>>>>> Anh-branch
+                        </div>
+                    </div>
+                </div>
+
+    );
+
+}
+export default Login;

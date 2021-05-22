@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+/* GENERAL */
+:root{
+    --main-blue: #14213D;
+    --main-yellow: #E9C46A;
+    --main-grey: #E5E5E5;
+    --main-red: #D9534F; 
+    --font: "Open Sans";
+}
+
+* {
+    font-family: var(--font);
+}
+
+h1{
+    font-weight: 700;
+    color: var(--main-blue);
+}
+
+h2{
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: var(--main-blue);
+}
+
+a {
+    color: var(--main-blue);
+}
+
+a:hover{
+    color:#1c325a;
+}
+
+textarea.form-control:focus,
+textarea.form-control:active{
+    outline: none !important;
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+textarea.form-control::selection{
+    background: #dbc37ac2;
+}
+
+
+input.form-control:focus,
+input.form-control:active{
+    outline: none !important;
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+
+.public-container {
+    margin: 2.5rem 10vw 5rem 10vw;
+}
+
+
+/* LOADERS */
+
+.loader {
+    width: 90%;
+    /* margin: 0; */
+    margin-bottom: 50px;
+
+}
+
+/* TOAST NOTIFICATIONS */
+.react-toast-notifications__toast.react-toast-notifications__toast--success.css-wo4ljk-ToastElement{
+    height: 50px;
+}
+
+
+
+/* profile picture and user name */
+
+.picture-name-con {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100%;
+}
+
+.picture-name-con h1 {
+    margin-left: 30px;
+}
+
+.p-data-container {
+    margin-top: 20px;
+    width: 80%;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.p-info-container {
+    width: 90%;
+    display: flex;
+    margin: 2px 0;
+    /* justify-content: space-between; */
+}
+
+.p-info-container b {
+    flex: 1 1;
+}
+
+.p-info-container p {
+    flex: 2 1;
+}
+
+/* about */
+
+.about-container {
+    width: 80%;
+    margin: 50px 0;
+}
+
+.button-primary.about{
+    margin-top: 10px;
+}
+
+.modal-footer{
+    border-top: 0;
+}
+
+.textareaCap {
+    display: flex;
+    justify-content: flex-end;
+    font-size: smaller;
+}
+
+.textareaCap p.chars {
+    justify-self: flex-end;
+    /* border: 1px solid yellow; */
+    
+}
+
+/* projects */
+
+.projects-container{
+    width: 80%;
+    margin: 50px 0;
+}
+
+.card{
+    box-shadow: 3px 3px 6px #00000033;
+    border: 0.5px solid var(--main-grey);
+    margin: 10px 25px 0 0;
+    /* height: 100px; */
+}
+
+/* skills */
+
+.skills-container{
+    margin: 50px 0;
+    width: 80%;
+}
+
+/* delete profile section */
+
+.delete-profile-container{
+    background-color: var(--main-grey);
+    padding: 4rem 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.delete-profile-container .button-danger{
+    align-self: flex-end;
+}
+
+/* media */
+/* screens up to 788px width */
+@media screen and (max-width: 778px) {
+    
+    .p-info-container {
+        width: 100%;
+    }
+
+    .picture-name-con {
+        width: 100%;
+    }
+
+    .about-container {
+        width: 100%;
+    }
+
+    .study-info-container {
+        width: 100%;
+    }
+
+    table tr td, th{
+        padding-bottom: 10px;
+    }
+
+    .skills-container{
+        width: 100%;
+    }
+
+    /* projects cards */
+    .card{
+        margin: 10px 20px;
+    }
+
+    .projects-container{
+        width: 100%;
+    }
+} 
+
+
+@media screen and (max-width: 500px) {
+
+    /* profile picture */
+    .picture-name-con {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    } 
+
+    .picture-name-con h1 {
+        margin: 10px auto;
+    }
+
+    .p-info-container {
+        flex-flow: column wrap;
+        margin: 5px 0;
+    }
+    
+    /* projects cards */
+    .card{
+        margin: 10px auto;
+    }
+        
+    }
+
+
+@media screen and (max-width: 450px) {
+
+    /* about */
+    .about-container {
+        margin: 25px 0;
+    }
+
+    .edit-skill-btn-container .button-secondary.btn.btn-primary,
+    .edit-skill-btn-container .button-primary.btn.btn-primary{
+        width: 48%;
+        margin: 0 0 20px 0 !important;
+    }
+   
+
+}

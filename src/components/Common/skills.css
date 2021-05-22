@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+:root{
+    --main-blue: #14213D;
+    --main-yellow: #E9C46A;
+    --main-grey: #E5E5E5;
+    --main-red: #D9534F; 
+    --font: "Open Sans";
+}
+
+* {
+    font-family: var(--font);
+}
+
+
+/* default style skill */
+.MuiChip-root.skill-tag{
+    color: white;
+    min-width: 50px;
+    background-color: var(--main-blue);
+    border: 0.5px solid var(--main-blue);
+    margin: 10px 5px 0 0;
+    transition: background-color 0.5ms ease-in-out;
+}
+
+
+.MuiChip-root.skill-tag:hover{
+    color: white;
+    min-width: 50px;
+    background-color: var(--main-blue);
+    border: 0.5px solid var(--main-blue);
+    margin: 10px 5px 0 0;
+    transition: background-color 0.5ms ease-in-out;
+}
+
+
+.MuiChip-root.skill-tag.MuiChip-deletable{
+    background-color: var(--main-blue);
+}
+
+.MuiChip-root.skill-tag.MuiChip-deletable:hover,.MuiChip-root.skill-tag.MuiChip-deletable:active{
+
+    background-color: var(--main-blue);
+}
+
+
+/* highlighted skills part */
+
+.highlighted-skill{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-flow: row-reverse;
+}
+
+
+.chip-private {
+    width: 50%;
+    margin: 0px 20px 0 0;
+}
+
+.chip-private p.skill-name{
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.chip-private p.skill-name span{
+    color: #888888;
+    font-size: 14px;
+}
+
+.chip-private p {
+    padding-top: 5px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.endorsers-con{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--main-grey);
+}
+
+.highlighted-skill:nth-of-type(3) .endorsers-con{
+    border-bottom: none;
+}
+
+.endorsers-con p{
+    margin:0;
+    margin-left: 10px;
+    padding: 0;
+}
+
+
+.skill-container{
+    display: flex;
+    flex-flow: column;
+}
+
+/* all skills part */
+
+.all-skill-container{
+    display: flex;
+    flex-flow: column;
+}
+
+div.highlighted-skill-con{
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 20px;
+    /* background-color: #14213D; */
+}
+
+div.skill-type-con{
+    margin: 20px 0;
+}
+
+h6{
+    width: 100%;
+    border-bottom: 1px solid var(--main-grey);
+    padding: 10px 0;
+    font-weight: bold;
+}
